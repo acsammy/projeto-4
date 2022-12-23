@@ -9,11 +9,11 @@ module.exports = {
     '@storybook/addon-presents',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    'storybook-addon-next'
+    'storybook-addon-next',
   ],
   framework: '@storybook/react',
   core: {
     builder: '@storybook/builder-webpack5',
   },
-  reactDocgen: false
+  reactDocgen: false,
 };

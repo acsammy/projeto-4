@@ -23,10 +23,6 @@ describe('<Menu />', () => {
   });
 
   it('should render menu mobile and button for open and close the menu', () => {
-    const { container } = renderTheme(
-      <Menu links={linksMock} logoData={logoData} />,
-    );
-
     const button = screen.getByLabelText('Open/Close menu');
     const menuContainer = button.nextSibling;
 
