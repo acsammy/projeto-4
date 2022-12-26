@@ -97,8 +97,6 @@ export const mapImageGrid = (section = {}) => {
     image_grid: grid = [],
   } = section;
 
-  console.log(altText);
-
   return {
     component: 'section.section-grid-image',
     title,
