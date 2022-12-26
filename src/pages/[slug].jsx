@@ -10,23 +10,23 @@ Page.propTypes = {
   data: P.array,
 };
 
-export const getStaticPaths = async () => {
-  const paths = await (
-    await loadPages()
-  ).map((page) => {
-    return {
-      params: {
-        slug: page.slug,
-      },
-    };
-  });
-  return {
-    paths,
-    fallback: false,
-  };
-};
+// export const getStaticPaths = async () => {
+//   const paths = await (
+//     await loadPages()
+//   ).map((page) => {
+//     return {
+//       params: {
+//         slug: page.slug,
+//       },
+//     };
+//   });
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };
 
-export const getStaticProps = async (ctx) => {
+export const getServerSideProps = async (ctx) => {
   let data = null;
 
   try {
