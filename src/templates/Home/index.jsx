@@ -9,10 +9,9 @@ import { GridImage } from '../../components/GridImage';
 import { Base } from '../Base';
 import config from '../../config';
 
-function Home({ data }) {
+export function Home({ data }) {
   const { menu, sections, footerHtml, slug, title } = data[0];
   const { links, text, link, srcImg } = menu;
-  console.log(data[0]);
 
   return (
     <Base
@@ -48,8 +47,6 @@ function Home({ data }) {
     </Base>
   );
 }
-
-export default Home;
 
 Home.propTypes = {
   data: P.array,

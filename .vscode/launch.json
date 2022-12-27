@@ -1,23 +1,56 @@
+// {
+//   "version": "0.2.0",
+//   "configurations": [
+//     {
+//       "name": "Attach Node.js",
+//       "processId": "${command:PickProcess}",
+//       "request": "attach",
+//       "skipFiles": ["<node_internals>/**"],
+//       "type": "node"
+//     },
+//     {
+//       "type": "chrome",
+//       "request": "launch",
+//       "name": "Launch Chrome against localhost",
+//       // "program": "${workspaceFolder}/src/pages/index.jsx",
+//       "outFiles": [
+//         "${workspaceFolder}/**/*.js"
+//       ],
+//       "url": "http://localhost:3000",
+//       "webRoot": "${workspaceFolder}",
+//       "resolveSourceMapLocations": [
+//     "${workspaceFolder}/",
+//     "!/node_modules/**"
+// ],
+//     }
+//   ]
+// }
 {
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Attach Node.js",
-      "processId": "${command:PickProcess}",
-      "request": "attach",
-      "skipFiles": ["<node_internals>/**"],
-      "type": "pwa-node"
+      "name": "Next.js: debug server-side",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "yarn dev"
     },
     {
+      "name": "Next.js: debug client-side",
       "type": "pwa-chrome",
       "request": "launch",
-      "name": "Launch Chrome against localhost",
-      "program": "${workspaceFolder}/src/pages/index.jsx",
-      "outFiles": [
-        "${workspaceFolder}/**/*.js"
-      ],
-      "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}"
+      "url": "http://localhost:3000"
+    },
+    {
+      "name": "Next.js: debug full stack",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "next dev",
+      "console": "integratedTerminal",
+      "serverReadyAction": {
+        "pattern": "started server on .+, url: (https?://.+)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome"
+      }
     }
   ]
 }

@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const MenuLink = ({ children, link, newTab = false }) => {
   const target = newTab ? '_blank' : '_self';
-  const nextLink = Link.match(/^\//) ? true : false;
+  const nextLink = link.match(/^\//) ? true : false;
 
   if (nextLink) {
     if (nextLink) {

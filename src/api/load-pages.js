@@ -7,7 +7,6 @@ export const loadPages = async (slug = '') => {
     : '';
 
   const url = `${config.url}/api/pages/${cleanSlug}`;
-  console.log(url);
 
   const raw = await fetch(url + '&populate=deep');
   const json = await raw.json();

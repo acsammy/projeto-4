@@ -12,7 +12,6 @@ export const getStaticProps = async () => {
 
   try {
     data = await loadPages('landing-page');
-    console.log(data);
   } catch (error) {
     //
   }
