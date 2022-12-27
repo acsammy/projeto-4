@@ -1,4 +1,5 @@
-import { Footer } from '.';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { Footer, FooterPrpos } from '.';
 
 export default {
   title: 'Footer',
@@ -6,9 +7,9 @@ export default {
   args: {
     footerHtml: `<p><a href="https://beacons.page/otaviomiranda">Feito com ❤ por Otávio Miranda</a></p>`,
   },
-};
+} as Meta;
 
-export const Template = (args) => {
+export const Template: Story<FooterPrpos> = (args) => {
   return (
     <div>
       <Footer {...args} />
