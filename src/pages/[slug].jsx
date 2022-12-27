@@ -34,7 +34,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getServerSideProps = async (ctx) => {
+export const getStaticProps = async (ctx) => {
   let data = null;
 
   try {
@@ -46,5 +46,6 @@ export const getServerSideProps = async (ctx) => {
     props: {
       data,
     },
+    revalidate: 3600,
   };
 };

@@ -7,7 +7,7 @@ export default function Index({ data = null }) {
   return <Home data={data} />;
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   let data;
 
   try {
@@ -25,6 +25,7 @@ export const getServerSideProps = async () => {
     props: {
       data,
     },
+    revalidate: 3600,
   };
 };
 
