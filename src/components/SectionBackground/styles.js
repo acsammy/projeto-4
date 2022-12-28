@@ -1,15 +1,11 @@
-import styled, { DefaultTheme, css } from 'styled-components';
+import styled, { css } from 'styled-components';
 
-type Background = {
-  background?: boolean;
-};
-
-const containerBackgroundActivate = (theme: DefaultTheme) => css`
+const containerBackgroundActivate = (theme) => css`
   background: ${theme.colors.primaryColor};
   color: ${theme.colors.white};
 `;
 
-export const Container = styled.div<Background>`
+export const Container = styled.div`
   ${({ theme, background }) => css`
     background: ${theme.colors.white};
     color: ${theme.colors.primaryColor};

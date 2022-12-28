@@ -1,13 +1,12 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
-import { SectionBackground, SectionBackgroundProps } from '.';
+import { SectionContainer } from '.';
 
 export default {
-  title: 'SectionBackground',
-  component: SectionBackground,
+  title: 'SectionContainer',
+  component: SectionContainer,
   args: {
     children: (
       <div>
-        <h1>SectionBackground</h1>
+        <h1>SectionContainer</h1>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
           doloribus debitis minima nam beatae alias eius, mollitia asperiores
@@ -17,12 +16,15 @@ export default {
       </div>
     ),
   },
-} as Meta;
+  argTypes: {
+    children: { type: '' },
+  },
+};
 
-export const Template: Story<SectionBackgroundProps> = (args) => {
+export const Template = (args) => {
   return (
     <div>
-      <SectionBackground {...args} />
+      <SectionContainer {...args} />
     </div>
   );
 };

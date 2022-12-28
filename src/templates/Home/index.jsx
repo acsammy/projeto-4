@@ -2,7 +2,7 @@ import P from 'prop-types';
 import Head from 'next/head';
 
 import { GridTwoColumns } from '../../components/GridTwoColumns';
-import { GridContent } from '../../components/GridContent/index.tjsx';
+import { GridContent } from '../../components/GridContent';
 import { GridText } from '../../components/GridText';
 import { GridImage } from '../../components/GridImage';
 
