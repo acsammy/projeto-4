@@ -1,7 +1,6 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.a`
-  ${({ theme }) => css`
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -10,5 +9,4 @@ export const Container = styled.a`
     > img {
       height: 3rem;
     }
-  `}
 `;
