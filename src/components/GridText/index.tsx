@@ -1,10 +1,10 @@
-import React from 'react';
-import * as Styled from './styles';
-import { SectionBackground } from '../SectionBackground/index';
-import { Heading } from '../Heading';
-import { TextComponent } from '../TextComponent';
+import React from "react";
+import * as Styled from "./styles";
+import { SectionBackground } from "../SectionBackground/index";
+import { Heading } from "../Heading";
+import { TextComponent } from "../TextComponent";
 
-type GridTextElementProps = {
+export type GridTextElementProps = {
   title: string;
   description: string;
 };
@@ -15,6 +15,7 @@ export type GridTextProps = {
   description: string;
   grid: GridTextElementProps[];
   sectionId?: string;
+  component?: string;
 };
 
 export const GridText = ({
@@ -22,7 +23,7 @@ export const GridText = ({
   description,
   grid,
   background = false,
-  sectionId = '',
+  sectionId = "",
 }: GridTextProps) => {
   return (
     <SectionBackground background={background} sectionId={sectionId}>

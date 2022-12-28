@@ -4,7 +4,7 @@ import { SectionBackground } from "../SectionBackground/index";
 import { TextComponent } from "../TextComponent";
 import * as Styled from "./styles";
 
-type GridImageElemetProps = {
+export type GridImageElemetProps = {
   altText: string;
   srcImg: string;
 };
@@ -13,8 +13,10 @@ export type GridImageProps = {
   title: string;
   description: string;
   grid?: GridImageElemetProps[];
+  altText: string;
   background?: boolean;
   sectionId?: string;
+  component?: string;
 };
 
 export const GridImage = ({

@@ -1,8 +1,8 @@
-import React from 'react';
-import * as Styled from './styles';
-import { SectionBackground } from '../SectionBackground/index';
-import { Heading } from '../Heading';
-import { TextComponent } from '../TextComponent';
+import React from "react";
+import * as Styled from "./styles";
+import { SectionBackground } from "../SectionBackground/index";
+import { Heading } from "../Heading";
+import { TextComponent } from "../TextComponent";
 
 export type GridTwoColumnsProps = {
   title: string;
@@ -10,6 +10,7 @@ export type GridTwoColumnsProps = {
   srcImg: string;
   background?: boolean;
   sectionId?: string;
+  component?: string;
 };
 
 export const GridTwoColumns = ({
@@ -17,7 +18,7 @@ export const GridTwoColumns = ({
   text,
   srcImg,
   background = false,
-  sectionId = '',
+  sectionId = "",
 }: GridTwoColumnsProps) => {
   return (
     <SectionBackground background={background} sectionId={sectionId}>
