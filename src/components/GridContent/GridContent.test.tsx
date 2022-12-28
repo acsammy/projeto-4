@@ -1,5 +1,5 @@
 import { renderTheme } from '../../styles/render-theme';
-import { GridContent } from '.';
+import { GridContent } from './index';
 
 import mock from './mock';
 
