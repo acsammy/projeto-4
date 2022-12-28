@@ -1,17 +1,29 @@
-import React from 'react';
-import P from 'prop-types';
-import { Heading } from '../Heading';
-import { SectionBackground } from '../SectionBackground';
-import { TextComponent } from '../TextComponent';
-import * as Styled from './styles';
+import React from "react";
+import { Heading } from "../Heading";
+import { SectionBackground } from "../SectionBackground/index";
+import { TextComponent } from "../TextComponent";
+import * as Styled from "./styles";
+
+type GridImageElemetProps = {
+  altText: string;
+  srcImg: string;
+};
+
+export type GridImageProps = {
+  title: string;
+  description: string;
+  grid?: GridImageElemetProps[];
+  background?: boolean;
+  sectionId?: string;
+};
 
 export const GridImage = ({
   title,
   description,
   grid,
   background = false,
-  sectionId = '',
-}) => {
+  sectionId = "",
+}: GridImageProps) => {
   return (
     <SectionBackground background={background} sectionId={sectionId}>
       <Styled.Container>
@@ -29,17 +41,4 @@ export const GridImage = ({
       </Styled.Container>
     </SectionBackground>
   );
-};
-
-GridImage.propTypes = {
-  background: P.bool,
-  title: P.string.isRequired,
-  description: P.string.isRequired,
-  grid: P.arrayOf(
-    P.shape({
-      altText: P.string.isRequired,
-      srcImg: P.string.isRequired,
-    }),
-  ).isRequired,
-  sectionId: P.string,
 };
