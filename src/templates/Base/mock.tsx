@@ -1,7 +1,8 @@
-import linksMock from '../../components/NavLinks/mock';
+import linksMock from "../../components/NavLinks/mock";
 
-import gridMock from '../../components/GridText/mock';
-import { GridText } from '../../components/GridText';
+import gridMock from "../../components/GridText/mock";
+import { GridText } from "../../components/GridText";
+import { BaseProps } from ".";
 
 export const mockBase = {
   children: (
@@ -16,8 +17,8 @@ export const mockBase = {
   ),
   links: linksMock,
   logoData: {
-    text: 'Logo',
-    link: '#',
+    text: "Logo",
+    link: "#",
   },
-  footerHtml: '<p>Teste de footer</p>',
-};
+  footerHtml: "<p>Teste de footer</p>",
+} as BaseProps;

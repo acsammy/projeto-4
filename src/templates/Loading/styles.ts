@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css, keyframes } from "styled-components";
 
 const rotate = () => keyframes`
   0% {
@@ -22,7 +22,7 @@ export const Container = styled.div`
 
     &:before,
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       left: 50%;

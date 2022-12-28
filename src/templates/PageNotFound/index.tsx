@@ -1,4 +1,4 @@
-import { GridContent } from '../../components/GridContent';
+import { GridContent } from "../../components/GridContent";
 
 export const PageNotFound = () => {
   return (
