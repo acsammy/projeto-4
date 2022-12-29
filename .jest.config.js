@@ -8,20 +8,15 @@ module.exports = {
     "!<rootDir>/src/styles/**/*.{js,jsx,ts,tsx}",
     "!<rootDir>/src/config/**/*.{js,jsx,ts,tsx}",
     "!<rootDir>/src/pages/**/*.{js,jsx,ts,tsx}",
+    "!<rootDir>/src/config/**/*.{js,jsx,ts,tsx}",
+    "!<rootDir>/src/pages/**/*.{js,jsx,ts,tsx}",
     "!<rootDir>/**/stories.{js,jsx,ts,tsx}",
     "!<rootDir>/src/templates/**/*.{js,jsx,ts,tsx}",
     "!<rootDir>/node_modules/",
   ],
-
   testEnvironment: "jsdom",
   testMatch: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[tj]s?(x)"],
   testPathIgnorePatterns: ["/node_modules/", "/.next/", "/.out/", "/public/"],
 
   setupFilesAfterEnv: ["<rootDir>/.jest/setup-tests.js"],
-  preset: "ts-jest",
-  testEnvironment: "node",
-  transform: {
-    "^.+\\.ts?$": "ts-jest",
-  },
-  transformIgnorePatterns: ["<rootDir>/node_modules/"],
 };
